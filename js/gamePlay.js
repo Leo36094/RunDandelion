@@ -12,27 +12,27 @@ const gamePlay = {
   key: 'gamePlay',
   preload: function() {
     // 載入資源
-    this.load.image('bg1', '../images/background/bg-front.png');
-    this.load.image('bg2', '../images/background/bg-middle.png');
-    this.load.image('bg3', '../images/background/bg-back.png');
-    this.load.image('bg4', '../images/background/bg-color.png');
-    this.load.image('footer', '../images/background/bg-ground.png');
-    this.load.image('time', '../images/time.png');
+    this.load.image('bg1', '/images/background/bg-front.png');
+    this.load.image('bg2', '/images/background/bg-middle.png');
+    this.load.image('bg3', '/images/background/bg-back.png');
+    this.load.image('bg4', '/images/background/bg-color.png');
+    this.load.image('footer', '/images/background/bg-ground.png');
+    this.load.image('time', '/images/time.png');
 
-    this.load.image('obstacleLv1Lg', '../images/item-level-1-branch.png');
-    this.load.image('obstacleLv1Md', '../images/item-level-1-rock.png');
-    this.load.image('obstacleLv2Lg', '../images/item-level-2-smoke-lg.png');
-    this.load.image('obstacleLv2Md', '../images/item-level-2-smoke-sm.png');
-    this.load.image('obstacleLv3Lg', '../images/item-level-3-fire-lg.png');
-    this.load.image('obstacleLv3Md', '../images/item-level-3-fire-sm.png');
+    this.load.image('obstacleLv1Lg', '/images/item-level-1-branch.png');
+    this.load.image('obstacleLv1Md', '/images/item-level-1-rock.png');
+    this.load.image('obstacleLv2Lg', '/images/item-level-2-smoke-lg.png');
+    this.load.image('obstacleLv2Md', '/images/item-level-2-smoke-sm.png');
+    this.load.image('obstacleLv3Lg', '/images/item-level-3-fire-lg.png');
+    this.load.image('obstacleLv3Md', '/images/item-level-3-fire-sm.png');
 
-    this.load.image('gameover', '../images/txt-game-over.png');
-    this.load.image('tryAgain', '../images/btn-try-again.svg');
+    this.load.image('gameover', '/images/txt-game-over.png');
+    this.load.image('tryAgain', '/images/btn-try-again.svg');
 
-    this.load.image('congratulations', '../images/txt-congratulations.png');
-    this.load.image('playAgain', '../images/btn-play-again.png');
+    this.load.image('congratulations', '/images/txt-congratulations.png');
+    this.load.image('playAgain', '/images/btn-play-again.png');
 
-    this.load.spritesheet('player', '../images/player.png', {
+    this.load.spritesheet('player', '/images/player.png', {
       frameWidth: 144,
       frameHeight: 120
     });
@@ -92,7 +92,7 @@ const gamePlay = {
       `0${Math.floor(this.gameTime / 60)}:${renderTwoDigitSeoncs(
         this.gameTime
       )}`,
-      { fontFamily: 'Arial', fontSize: '20px' }
+      { fontFamily: 'Roboto', fontSize: '20px' }
     );
     let timer = setInterval(() => {
       this.gameTime--;
