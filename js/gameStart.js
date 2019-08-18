@@ -3,15 +3,15 @@ const gameStart = {
   key: 'gameStart',
   preload: function() {
     // 載入資源
-    this.load.image('bg1', '../images/background/bg-front.png');
-    this.load.image('bg2', '../images/background/bg-middle.png');
-    this.load.image('bg3', '../images/background/bg-back.png');
-    this.load.image('bg4', '../images/background/bg-color.png');
-    this.load.image('footer', '../images/background/bg-ground.png');
+    this.load.image('bg1', './images/background/bg-front.png');
+    this.load.image('bg2', './images/background/bg-middle.png');
+    this.load.image('bg3', './images/background/bg-back.png');
+    this.load.image('bg4', './images/background/bg-color.png');
+    this.load.image('footer', './images/background/bg-ground.png');
 
-    this.load.image('title', '../images/txt-title.png')
-    this.load.image('subTitle', '../images/txt-subtitle.png')
-    this.load.image('startButton', '../images/btn-press-start.png')
+    this.load.image('title', './images/txt-title.png')
+    this.load.image('subTitle', './images/txt-subtitle.png')
+    this.load.image('startButton', './images/btn-press-start.png')
   },
   create: function() {
     // 載入完成，遊戲相關設定
