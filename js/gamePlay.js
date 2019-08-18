@@ -85,6 +85,7 @@ const gamePlay = {
     // 浦公英動作
     keyFrame(this);
 
+
     // 計時器設定
     this.timerText = this.add.text(
       width - 280,
@@ -103,8 +104,6 @@ const gamePlay = {
         this.speedLv = 3;
       }
       if (this.gameTime < 1) {
-        clearInterval(timer);
-        this.gameStop = true;
         let congratulations = this.add.image(
           width / 2,
           height / 2 - 50,
@@ -117,6 +116,8 @@ const gamePlay = {
         playAgain.setScale(0.6);
         playAgain.setInteractive();
         playAgain.on('pointerdown', () => this.scene.start('gameStart'));
+        clearInterval(timer);
+        this.gameStop = true;
       }
       // 設定時間文字
       this.timerText.setText(
@@ -204,7 +205,9 @@ const gamePlay = {
   },
   update: function() {
     // 更新
-    if (this.gameStop) return;
+    if (this.gameStop) {
+      return;
+    }
     this.bg1.tilePositionX += 4 * this.speedLv;
     this.bg2.tilePositionX += 2 * this.speedLv;
     this.bg3.tilePositionX += 3 * this.speedLv;
